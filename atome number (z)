@@ -1,0 +1,13 @@
+import element
+
+def get_element_name(atomic_number):
+    try:
+        el = element(atomic_number)
+        return el.name
+    except ValueError:
+        return "Element not found in the periodic table."
+
+# test code
+atomic_number = int(input("Enter the atomic number: "))
+print("Element name:", get_element_name(atomic_number))
+
